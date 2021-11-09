@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Require meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Sheets Styles -->
+    <link 
+        rel="stylesheet" 
+        href="{{url_for('static', filename='bootstrap.min.css')}}"
+    >
+    <link 
+        rel="stylesheet" 
+        href="{{url_for('static', filename='manhattan.style.css')}}"
+    >
+
+    <title>Manhattan Proyect</title>
+</head>
+<body id="wallpaper-page">
+    <div class="container mt-4" id="container">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h2 class="text-center">Manhattan Proyect</h2>
+                        <form action="" method="post">
+                            <div class="input-group mb-3">
+                                <input 
+                                    name="CustomerName"
+                                    class="form-control" 
+                                    type="text" 
+                                    placeholder="Customer Name"
+                                    aria-label="Customer Name"
+                                    aria-describedby="btnCustomerName"
+                                    required
+                                >
+                                <input
+                                    type="submit"
+                                    class="btn btn-outline-secondary"
+                                    id="btnCustomerName"
+                                    value="Search"
+                                >
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+</html>

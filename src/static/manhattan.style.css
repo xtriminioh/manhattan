@@ -1,0 +1,11 @@
+#wallpaper-page{
+    background: url(./wallpaper/img-manhattan04.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+}
+
+#container{
+    max-width: 500px;
+}
+
