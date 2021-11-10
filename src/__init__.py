@@ -39,19 +39,21 @@ def create_app(test_config=None):
     def upload():
         if request.method == 'POST':
             if 'file' not in request.files:
-                flash('No file part')
+                flash(f'No file part', 'warning')
                 return redirect(request.url)
             ffile = request.files['file']
 
             if ffile.filename == '':
-                flash('No selected file')
+                flash(f'No selected file', 'info')
                 return redirect(request.url)
 
             if ffile and allowed_file(ffile.filename):
-                filename = secure_filename(ffile.filename)
+                filename = secure_filename(f'{ffile.filename}')
                 filename = filename.lower()
                 filepath = os.path.join(UPLOAD_FOLDER, filename)
                 ffile.save(filepath)
+                flash(f'Saved!! file: {filename}', 'success')
+                return redirect(request.url)
 
         return render_template('upload.html')
 
